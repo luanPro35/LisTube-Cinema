@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div
       id="header-section"
-      className="flex items-center justify-between px-6 py-8 bg-black text-white shadow-md"
+      className="fixed top-0 left-[280px] right-0 h-24 flex items-center justify-between px-6 bg-transparent text-white shadow-md z-50"
     >
       <div className="relative w-1/2">
         <input
