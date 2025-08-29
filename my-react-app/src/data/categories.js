@@ -1,0 +1,17 @@
+export const categories = [
+  "All",
+  "News",
+  "Crowd",
+  "Music Videos",
+  "Game Show",
+  "Entertainment",
+  "Recently Uploaded",
+  "New Drama",
+  "Pop Music",
+  "Web Series",
+  "Technology",
+  "Business Solution",
+  "T-Series",
+  "Sports",
+  "World Cup",
+];

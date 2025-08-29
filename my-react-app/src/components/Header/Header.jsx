@@ -9,7 +9,7 @@ const Header = () => {
       <div className="relative w-1/2">
         <input
           type="text"
-          className="w-full pl-10 pr-4 py-3 rounded-2xl bg-gray-800 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full pl-10 pr-4 py-3 rounded-2xl bg-transparent border border-gray-600 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           placeholder="Search Your Videos"
         />
         <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
