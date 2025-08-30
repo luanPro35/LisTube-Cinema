@@ -1,0 +1,62 @@
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Additional responsive styles */
+@media (max-width: 768px) {
+    .recent-live-videos-container {
+        padding: 1rem;
+    }
+
+    .recent-live-videos-title {
+        font-size: 2rem;
+    }
+}
+
+/* Smooth scroll behavior */
+.hide-scrollbar {
+    scroll-behavior: smooth;
+}
+
+/* Custom cursor styles */
+.grab-cursor {
+    cursor: grab;
+}
+
+.grabbing-cursor {
+    cursor: grabbing;
+}
