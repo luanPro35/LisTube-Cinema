@@ -1,30 +1,22 @@
 import React, { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { NavItem, NavItemContent } from "./Navbar.styles";
 import { FaChevronRight } from "react-icons/fa";
 
 const NavbarItem = ({ icon, label, href }) => {
   const IconComponent = icon;
+  const navigate = useNavigate();
 
   const handleClick = useCallback(
     (event) => {
-      if (href && href.startsWith("header-section")) {
-        event.preventDefault();
-        const targetElement = document.getElementById(href);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" });
-        }
-      }
+      event.preventDefault();
+      navigate(href);
     },
-    [href]
+    [navigate, href]
   );
 
-  const navItemProps = {};
-  if (href && !href.startsWith("header-section")) {
-    navItemProps.href = href;
-  }
-
   return (
-    <NavItem {...navItemProps} onClick={handleClick}>
+    <NavItem href={href} onClick={handleClick}>
       <NavItemContent>
         <IconComponent /> <span>{label}</span>
       </NavItemContent>

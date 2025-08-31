@@ -10,8 +10,8 @@ import {
 } from "react-icons/fa";
 
 const menuItems = [
-  { icon: FaHome, label: "Home", href: "header-section" },
-  { icon: FaUser, label: "About", href: "" },
+  { icon: FaHome, label: "Home", href: "/" },
+  { icon: FaUser, label: "About", href: "/about" },
   { icon: FaStop, label: "Movies", href: "/movies" },
   { icon: FaFlag, label: "Pages", href: "/pages" },
   { icon: FaList, label: "Categories", href: "/categories" },

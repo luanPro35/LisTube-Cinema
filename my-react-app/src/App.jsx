@@ -1,34 +1,26 @@
 import React from "react";
+import { Routes, Route, Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Header from "./components/Header/Header";
-import HeroSection from "./components/HeroSection/HeroSection";
-import VideoShort from "./components/VideoShort.jsx";
-import FilterBar from "./components/FilterBar.jsx";
-import TopTrending from "./components/topTrending.jsx";
-import RecentLiveVideos from "./components/RecentLiveVideos.jsx";
-import LatestMovies from "./components/LatestMovies.jsx";
-import KidsMovieCard from "./components/KidsMovieCard.jsx";
-import RecommendedMovies from "./components/RecommendedMovies.jsx";
-import Blog from "./components/Blog.jsx";
-import Footer from "./components/Footer.jsx";
+import Home from "./pages/Home";
+import About from "./pages/About";
+
+const AppLayout = () => (
+  <div className="flex min-h-screen bg-black">
+    <Navbar />
+    <main className="flex-1 ml-[280px] overflow-hidden">
+      <Outlet />
+    </main>
+  </div>
+);
+
 const App = () => {
   return (
-    <div className="flex">
-      <Navbar />
-      <div className="flex-1 ml-[280px] overflow-hidden bg-b">
-        <Header />
-        <HeroSection />
-        <VideoShort />
-        <FilterBar />
-        <TopTrending />
-        <RecentLiveVideos />
-        <LatestMovies />
-        <KidsMovieCard />
-        <RecommendedMovies />
-        <Blog />
-        <Footer />
-      </div>
-    </div>
+    <Routes>
+      <Route element={<AppLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Route>
+    </Routes>
   );
 };
 
