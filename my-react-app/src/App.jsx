@@ -3,6 +3,7 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Movie from "./pages/Movie";
 
 const AppLayout = () => (
   <div className="flex min-h-screen bg-black">
@@ -19,6 +20,7 @@ const App = () => {
       <Route element={<AppLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/movies" element={<Movie />} />
       </Route>
     </Routes>
   );
