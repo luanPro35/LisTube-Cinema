@@ -8,6 +8,7 @@ import {
   FaList,
   FaEnvelope,
 } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 const menuItems = [
   { icon: FaHome, label: "Home", href: "/" },
@@ -19,6 +20,8 @@ const menuItems = [
 ];
 
 const NavMenu = () => {
+  const location = useLocation();
+
   return (
     <Menu>
       {menuItems.map((item, index) => (
@@ -27,6 +30,7 @@ const NavMenu = () => {
           icon={item.icon}
           label={item.label}
           href={item.href}
+          isActive={location.pathname === item.href}
         />
       ))}
     </Menu>

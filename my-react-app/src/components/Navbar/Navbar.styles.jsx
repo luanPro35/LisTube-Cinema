@@ -74,7 +74,8 @@ export const NavItem = styled.div`
   transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &.active {
     background: linear-gradient(90deg, #00f260, #0575e6, #7b2ff7);
     color: white;
   }
